@@ -12,4 +12,4 @@
 - Generics = memberi kemampuan agar dapat menerima data dengan tipe data yang berbeda.
 dan masih banyak lagi.
 
-3. dari semua yang ada bisa digunakan tergantung case yang akan dihadapi. dan masaih ada banyak lagi. Kita akan mempelajari cara menggunakan semua konsep ini dalam bahasa pemrograman Dart untuk membuat aplikasi yang bersifat berorientasi objek. Ini adalah fondasi yang penting untuk pengembangan aplikasi Flutter, yang juga menggunakan Dart sebagai bahasa pemrograman utamanya.
+3. dari semua yang ada bisa digunakan tergantung case yang akan dihadapi. dan masaih ada banyak lagi. kita akan mempelajari cara menggunakan semua konsep ini dalam bahasa pemrograman Dart untuk membuat aplikasi yang bersifat berorientasi objek. Ini adalah fondasi yang penting untuk pengembangan aplikasi Flutter, yang juga menggunakan Dart sebagai bahasa pemrograman utamanya.
