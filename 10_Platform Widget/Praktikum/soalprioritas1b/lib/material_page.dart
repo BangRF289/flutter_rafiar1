@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
               child: Row(
                 children: [
                   CircleAvatar(
-                    backgroundColor: Color.fromARGB(255, 36, 182, 13),
+                    backgroundColor: const Color.fromARGB(255, 36, 182, 13),
                     radius: 30,
 
                     child: Text(
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ), // Ukuran avatar sesuai kebutuhan Anda
                   ),
-                  SizedBox(width: 10), // Spacer antara avatar dan teks
+                  const SizedBox(width: 10), // Spacer antara avatar dan teks
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
