@@ -1,13 +1,11 @@
-# Rangkuman dari materi Platform Widget
+# Rangkuman dari materi Flutter Layout
 
-(1). Flutter dapat mengembangkan aplikasi dengan os android atau ios. Untuk mengembangan aplikasi berbasis android flutter menggunakan widget Material App. Sedangkan untuk mengembangkan aplikasi berbasis ios Flutter menggunakan widget Cupertino App.
+(1) Layout 
+- berfungsi untuk mengatur letak
+- lay out berbentuk widget yang mengatur widget didalamnya.
 
-(2). Material App
-- Widget dasar yang mengemas seluruh widget dalam aplikasi. Digunakan untuk mengembangkan android. Di import dari "Package:flutter/material.dart".
-- Widget yang pertama kali dibuka diletakkan bagian Home. 
-- Scaffold = widget dasar untuk membuat suatu halaman pada Material App. Biasanya 1 Material App mempunyai beberapa Scaffold. Membentuk tata letak dasar sebuah halaman yang ditulis melalui properti.
+(2) Flutter Layout Terdapat 2 jenis yaitu Single Child Layout dan Multi Child Layout.  
 
-(3). Cupertino App
-- Widget dasar yang mengemas seluruh widget dalam aplikasi. Digunakan untuk mengembangkan ios. Di import dari "Package:flutter/cupertino.dart".
-- Widget yang pertama kali dibuka diletakkan bagian Home.
-- CupertinoPageScaffold = sama halnya seperti Scaffold pada Material App, CupertinoPageScaffold digunakan untuk membangun halaman pada Cupertino App. Membentuk tata letak dasar sebuah halaman yang ditulis melalui properti.
+- Single Child Layout widget yang hanya memiliki 1 widget anak, biasanya menggunakan (Child). seperti contohnya container, center, sizedbox. 
+
+- Sedangkan Multi Child Layout merupakan widget yang bisa memiliki lebih dari 1 widget anak, biasanya menggunakan (Childern). Contohnya Column, Row, ListView, GridView. 
