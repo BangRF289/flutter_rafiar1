@@ -39,16 +39,15 @@ class HomePage extends StatelessWidget {
                   CircleAvatar(
                     backgroundColor: const Color.fromARGB(255, 36, 182, 13),
                     radius: 30,
-
                     child: Text(
                       avatarText,
                       style: const TextStyle(
                         fontSize: 20,
                         color: Colors.white,
                       ),
-                    ), // Ukuran avatar sesuai kebutuhan Anda
+                    ),
                   ),
-                  const SizedBox(width: 10), // Spacer antara avatar dan teks
+                  const SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
