@@ -198,9 +198,9 @@ class ContactState extends State<Contact> {
                           children: [
                             ElevatedButton(
                               style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Color.fromARGB(255, 173, 33, 243)),
+                                backgroundColor: MaterialStateProperty.all<
+                                        Color>(
+                                    const Color.fromARGB(255, 173, 33, 243)),
                               ),
                               onPressed: () {
                                 if (formKey.currentState!.validate()) {
