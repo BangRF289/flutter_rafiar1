@@ -49,6 +49,7 @@ class ContactState extends State<Contact> {
         backgroundColor: const Color.fromRGBO(221, 152, 255, 1),
         child: ListView(
           children: [
+            const SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/gridview');
@@ -64,6 +65,7 @@ class ContactState extends State<Contact> {
                 ),
               ),
             ),
+            const SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/contact');
