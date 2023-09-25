@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF6200EE),
+          backgroundColor: const Color(0xFF6200EE),
           centerTitle: true,
           title: const Text("My Flutter App"),
           actions: <Widget>[
