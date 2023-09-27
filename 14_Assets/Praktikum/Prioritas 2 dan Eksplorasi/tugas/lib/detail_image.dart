@@ -31,6 +31,7 @@ class DetailImagePage extends StatelessWidget {
                 ),
                 child: const Text('Go Back'),
               ),
+              const SizedBox(height: 30),
             ],
           ),
         ),

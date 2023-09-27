@@ -27,6 +27,7 @@ class Data {
 class ContactState extends State<Contact> {
   String? updatedFileName;
   String? selectedFileName;
+  String? ubahFileName = "";
   //for color
   Color currentColors = Colors.orange;
   //for date
@@ -248,8 +249,13 @@ class ContactState extends State<Contact> {
                           itemCount: dataList.length,
                           itemBuilder: (context, position) {
                             String name = dataList[position].name ?? "";
-                            String avatarText =
-                                name.substring(0, 1).toUpperCase();
+                            String avatarText = "";
+                            if (name == "") {
+                              avatarText = "";
+                            } else {
+                              avatarText = name[0].toUpperCase();
+                            }
+                            // print(avatarText);
                             return ListTile(
                               leading: CircleAvatar(
                                 backgroundColor:
@@ -537,19 +543,13 @@ class ContactState extends State<Contact> {
       selectedFileName = file.name;
     });
     updatedFileName = selectedFileName;
+    print(file.path);
+    ubahFileName = file.path.toString();
     _openFiles(file);
   }
 
   void _openFiles(PlatformFile file) {
-    // Simpan path file ke dalam dataList saat file dipilih
-    dataList.add(Data(
-      name: name,
-      number: number,
-      date: _dueDate,
-      currentColors: currentColors,
-      file: file.path, // Simpan path file di sini
-    ));
-    setState(() {});
+    // OpenFile.open(file.path);
   }
 
   void _editContact(BuildContext context, List<Data> dataList, Data contact,
@@ -558,6 +558,7 @@ class ContactState extends State<Contact> {
     String updatedNumber = contact.number ?? "";
     DateTime? updatedDate = contact.date;
     String? updatedFileName = contact.file;
+    int? updateIndex = position;
 
     showDialog(
       context: context,
@@ -647,9 +648,17 @@ class ContactState extends State<Contact> {
 
                         // Tutup dialog
                         Navigator.of(context).pop();
-
-                        setStateCallback();
+                        dataList[updateIndex] = Data(
+                          name: updatedName,
+                          number: updatedNumber,
+                          date: updatedDate,
+                          currentColors: currentColors,
+                          file: ubahFileName,
+                        );
+                        setState(() {});
                       }
+
+                      setStateCallback();
                     }
                   },
                   child: const Text("Save"),
