@@ -27,6 +27,7 @@ class Data {
 class ContactState extends State<Contact> {
   String? updatedFileName;
   String? selectedFileName;
+  String? ubahFileName = "";
   //for color
   Color currentColors = Colors.orange;
   //for date
@@ -49,6 +50,7 @@ class ContactState extends State<Contact> {
         backgroundColor: const Color.fromRGBO(221, 152, 255, 1),
         child: ListView(
           children: [
+            const SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/gridview');
@@ -64,6 +66,7 @@ class ContactState extends State<Contact> {
                 ),
               ),
             ),
+            const SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/contact');
@@ -246,8 +249,13 @@ class ContactState extends State<Contact> {
                           itemCount: dataList.length,
                           itemBuilder: (context, position) {
                             String name = dataList[position].name ?? "";
-                            String avatarText =
-                                name.substring(0, 1).toUpperCase();
+                            String avatarText = "";
+                            if (name == "") {
+                              avatarText = "";
+                            } else {
+                              avatarText = name[0].toUpperCase();
+                            }
+                            // print(avatarText);
                             return ListTile(
                               leading: CircleAvatar(
                                 backgroundColor:
@@ -535,19 +543,13 @@ class ContactState extends State<Contact> {
       selectedFileName = file.name;
     });
     updatedFileName = selectedFileName;
+
+    ubahFileName = file.path.toString();
     _openFiles(file);
   }
 
   void _openFiles(PlatformFile file) {
-    // Simpan path file ke dalam dataList saat file dipilih
-    dataList.add(Data(
-      name: name,
-      number: number,
-      date: _dueDate,
-      currentColors: currentColors,
-      file: file.path, // Simpan path file di sini
-    ));
-    setState(() {});
+    // OpenFile.open(file.path);
   }
 
   void _editContact(BuildContext context, List<Data> dataList, Data contact,
@@ -556,7 +558,14 @@ class ContactState extends State<Contact> {
     String updatedNumber = contact.number ?? "";
     DateTime? updatedDate = contact.date;
     String? updatedFileName = contact.file;
-
+    // int? updateIndex = position;
+    // dataList[updateIndex] = Data(
+    //   name: updatedName,
+    //   number: updatedNumber,
+    //   date: updatedDate,
+    //   currentColors: currentColors,
+    //   file: ubahFileName,
+    // );
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -641,13 +650,15 @@ class ContactState extends State<Contact> {
                         dataList[position].number = updatedNumber;
                         dataList[position].date = selectedDate;
                         dataList[position].file =
-                            updatedFileName; // Perbarui file di sini
+                            ubahFileName; // Perbarui file di sini
 
                         // Tutup dialog
                         Navigator.of(context).pop();
 
-                        setStateCallback();
+                        setState(() {});
                       }
+
+                      setStateCallback();
                     }
                   },
                   child: const Text("Save"),

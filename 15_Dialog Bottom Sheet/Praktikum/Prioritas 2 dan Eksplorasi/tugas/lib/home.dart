@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: const Color.fromRGBO(221, 152, 255, 1),
         child: ListView(
           children: [
+            const SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/gridview');
@@ -30,6 +31,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/contact');

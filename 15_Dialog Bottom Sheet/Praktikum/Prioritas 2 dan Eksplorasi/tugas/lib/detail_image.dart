@@ -21,6 +21,7 @@ class DetailImagePage extends StatelessWidget {
                 imagePath,
                 fit: BoxFit.cover,
               ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
@@ -30,6 +31,7 @@ class DetailImagePage extends StatelessWidget {
                 ),
                 child: const Text('Go Back'),
               ),
+              const SizedBox(height: 30),
             ],
           ),
         ),

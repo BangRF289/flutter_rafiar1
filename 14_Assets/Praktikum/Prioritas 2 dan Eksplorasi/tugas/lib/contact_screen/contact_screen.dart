@@ -543,7 +543,7 @@ class ContactState extends State<Contact> {
       selectedFileName = file.name;
     });
     updatedFileName = selectedFileName;
-    print(file.path);
+
     ubahFileName = file.path.toString();
     _openFiles(file);
   }
@@ -558,8 +558,14 @@ class ContactState extends State<Contact> {
     String updatedNumber = contact.number ?? "";
     DateTime? updatedDate = contact.date;
     String? updatedFileName = contact.file;
-    int? updateIndex = position;
-
+    // int? updateIndex = position;
+    // dataList[updateIndex] = Data(
+    //   name: updatedName,
+    //   number: updatedNumber,
+    //   date: updatedDate,
+    //   currentColors: currentColors,
+    //   file: ubahFileName,
+    // );
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -644,17 +650,11 @@ class ContactState extends State<Contact> {
                         dataList[position].number = updatedNumber;
                         dataList[position].date = selectedDate;
                         dataList[position].file =
-                            updatedFileName; // Perbarui file di sini
+                            ubahFileName; // Perbarui file di sini
 
                         // Tutup dialog
                         Navigator.of(context).pop();
-                        dataList[updateIndex] = Data(
-                          name: updatedName,
-                          number: updatedNumber,
-                          date: updatedDate,
-                          currentColors: currentColors,
-                          file: ubahFileName,
-                        );
+
                         setState(() {});
                       }
 
