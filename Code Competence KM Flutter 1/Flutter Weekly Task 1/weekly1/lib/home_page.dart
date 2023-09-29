@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lorem_ipsum/lorem_ipsum.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -58,20 +59,40 @@ class _MyWidgetState extends State<MyWidget> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: const Text('Data yang Anda masukkan:'),
+            title: Text(
+              'Data yang Anda masukkan:',
+              style: GoogleFonts.playfairDisplay(),
+            ),
             content: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('First Name: ${firstNameController.text}'),
-                Text('Last Name: ${lastNameController.text}'),
-                Text('Email: ${emailController.text}'),
-                Text('Message: ${messageController.text}'),
+                Text(
+                  'First Name: ${firstNameController.text}',
+                  style: GoogleFonts.playfairDisplay(),
+                ),
+                Text(
+                  'Last Name: ${lastNameController.text}',
+                  style: GoogleFonts.playfairDisplay(),
+                ),
+                Text(
+                  'Email: ${emailController.text}',
+                  style: GoogleFonts.playfairDisplay(),
+                ),
+                Text(
+                  'Message: ${messageController.text}',
+                  style: GoogleFonts.playfairDisplay(),
+                ),
               ],
             ),
             actions: [
               TextButton(
-                child: const Text('Tutup'),
+                child: Text(
+                  'Tutup',
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: 16,
+                  ),
+                ),
                 onPressed: () {
                   // Clear the text in the TextFormFields
                   firstNameController.clear();
@@ -100,14 +121,32 @@ class _MyWidgetState extends State<MyWidget> {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
+                const SizedBox(height: 300),
+                Text(
+                  'Contact Us',
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  loremIpsum(paragraphs: 1, words: 50),
+                  style: GoogleFonts.playfairDisplay(fontSize: 18),
+                ),
+                const SizedBox(height: 30),
                 Row(
                   children: [
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('First Name',
-                              style: TextStyle(fontSize: 16)),
+                          Text(
+                            'First Name',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 16,
+                            ),
+                          ),
                           TextFormField(
                             controller: firstNameController,
                             decoration: const InputDecoration(
@@ -126,8 +165,12 @@ class _MyWidgetState extends State<MyWidget> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('Last Name',
-                              style: TextStyle(fontSize: 16)),
+                          Text(
+                            'Last Name',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 16,
+                            ),
+                          ),
                           TextFormField(
                             controller: lastNameController,
                             decoration: const InputDecoration(
@@ -145,7 +188,12 @@ class _MyWidgetState extends State<MyWidget> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Email', style: TextStyle(fontSize: 16)),
+                    Text(
+                      'Email',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 16,
+                      ),
+                    ),
                     TextFormField(
                       controller: emailController,
                       decoration: const InputDecoration(
@@ -161,8 +209,12 @@ class _MyWidgetState extends State<MyWidget> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('What can we help you with?',
-                        style: TextStyle(fontSize: 16)),
+                    Text(
+                      'What can we help you with?',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 16,
+                      ),
+                    ),
                     TextFormField(
                       maxLines: 5,
                       controller: messageController,
@@ -177,7 +229,12 @@ class _MyWidgetState extends State<MyWidget> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: submit,
-                  child: const Text('Submit'),
+                  child: Text(
+                    'Submit',
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               ],
             ),
