@@ -1,7 +1,18 @@
-# Rangkuman dari Materi Flutter Navigation
+#Rangkuman Materi Provider
 
-(1). Navigation adalah widget yang berfungsi untuk berpindah halaman. Kita menggunankan Navigator.Push() untuk berpindah halaman, juga menggunakan Navigator.pop() untuk kembali ke halaman sebelumnya. 
+(1). Provider adalah package Flutter yang digunakan untuk manajemen state dan penyediaan data dalam aplikasi Flutter. Ini memungkinkan pengembang untuk dengan mudah mengelola state aplikasi dan membagikan data di antara berbagai bagian aplikasi tanpa perlu banyak boilerplate code.
 
-(2). Navigation dengan Named Routes, Setiap tampilan atau layar dalam aplikasi Flutter disebut "route" atau "screen." Setiap route memiliki nama yang unik yang digunakan untuk mengidentifikasinya. Kita dapat menggunakan Navigator untuk berpindah antara route atau tampilan dengan menggunakan nama route. Kita menggunankan Navigator.PushNamed() untuk berpindah halaman, juga menggunakan Navigator.pop() untuk kembali ke halaman sebelumnya. Akan tetapi kita harus mendaftarkan Initial Route dan Routes pada material app. Tiap Route adalah fungsi yang membentuk halaman.
+(2). Beberapa fitur utama provider dalam Flutter meliputi:
+- State Management: provider membantu dalam manajemen state aplikasi, termasuk state lokal (per-widget) dan state global (dalam seluruh aplikasi).
 
-(3). Navigasi adalah bagian penting dari pengembangan aplikasi mobile. Dengan menggunakan Navigator dan konsep-konsep terkait, Kita dapat membuat pengalaman pengguna yang mulus dan terstruktur dalam aplikasi Flutter Anda.
+- Dependency Injection: Ini memungkinkan penyediaan dependensi dengan mudah, sehingga Anda dapat mengakses objek atau data yang dibutuhkan oleh berbagai bagian aplikasi.
+
+- Consumer Widget: Consumer widget dapat digunakan untuk mengupdate UI ketika ada perubahan dalam state, tanpa perlu me-refresh seluruh widget.
+
+- Multi-provider: Anda dapat menggunakan beberapa penyedia untuk berbagai jenis data atau dependensi dalam aplikasi Anda.
+
+-Notifier Classes: ChangeNotifier dan ListenableProvider adalah jenis-jenis penyedia yang umum digunakan untuk mengelola state dan notifikasi perubahan.
+
+- Immutable State: Dengan menggunakan objek immutable, Anda dapat memastikan bahwa state aplikasi tidak akan berubah secara tidak terduga.
+
+(3). Provider sangat berguna dalam mempermudah pengembangan aplikasi Flutter yang bersifat reaktif, di mana UI merespons perubahan dalam state aplikasi secara otomatis. Ini membantu dalam membangun aplikasi yang lebih efisien dan mudah di-maintain.
