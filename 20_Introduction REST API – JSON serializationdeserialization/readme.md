@@ -1,0 +1,9 @@
+# Rangkuman Introduction REST API – JSON serialization/deserialization
+
+(1). REST (Representational State Transfer) adalah gaya arsitektur untuk merancang aplikasi yang terhubung melalui jaringan. Ini umumnya digunakan dalam pengembangan layanan web. API RESTful (Antarmuka Pemrograman Aplikasi) mengikuti prinsip-prinsip arsitektur REST, menyediakan seperangkat konvensi untuk membangun dan berinteraksi dengan layanan web. API REST menggunakan metode HTTP standar (GET, POST, PUT, DELETE) untuk melakukan operasi pada sumber daya yang diidentifikasi oleh URL (Uniform Resource Locator).
+
+(2). JSON (JavaScript Object Notation) adalah format pertukaran data ringan yang umum digunakan dalam pengembangan web. Mudah untuk dibaca dan ditulis oleh manusia, serta mudah untuk diproses dan dihasilkan oleh mesin.Serialisasi adalah proses mengonversi struktur data atau objek ke dalam format (seperti JSON) yang dapat dengan mudah dikirim atau disimpan. Dalam konteks API REST, ini sering digunakan untuk menyiapkan data sebelum ditransmisikan dari server ke klien. Deserialisasi adalah proses mengonversi data yang diterima (dalam format JSON) kembali ke dalam format terstruktur atau objek yang dapat digunakan dalam aplikasi.
+
+(3). Serialisasi dan deserialisasi JSON memainkan peran penting dalam komunikasi antara klien dan server dalam API RESTful.
+Ketika klien mengirim data ke server atau meminta data dari server, payload seringkali di-serialize ke format JSON sebelum ditransmisikan.
+Di sisi server, data JSON yang diterima di-deserialize menjadi objek yang dapat diproses dan dimanipulasi oleh aplikasi server.

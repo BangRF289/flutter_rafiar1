@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DiceBear Image Generator'),
+        title: const Text('DiceBear Image Generator'),
       ),
       body: Center(
         child: Column(
@@ -60,12 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 200,
                   )
                 : Container(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
                 controller: textController,
-                decoration: InputDecoration(labelText: 'Enter text'),
+                decoration: const InputDecoration(labelText: 'Enter text'),
               ),
             ),
             ElevatedButton(
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   // You can show a dialog or a message to inform the user.
                 }
               },
-              child: Text('Generate'),
+              child: const Text('Generate'),
             ),
           ],
         ),
